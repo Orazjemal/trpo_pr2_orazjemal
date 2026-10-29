@@ -1,0 +1,6 @@
+{
+  "name": "trpo-pr02-catalog",
+  "private": true,
+  "scripts": { "build:css": "sass scss/styles.scss css/styles.css", "watch:css": "sass --watch scss/styles.scss:css/styles.css" },
+  "devDependencies": { "sass": "^1.0.0" }
+}

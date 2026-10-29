@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Адаптивный каталог товаров учебного проекта.">
+  <title>Каталог учебных товаров</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/catalog.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#catalog">Перейти к каталогу</a>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">К</span><span>Каталог<span class="brand-light"> учебного проекта</span></span></a>
+      <nav aria-label="Главная навигация"><a href="#catalog">Каталог</a><a href="#about">О проекте</a></nav>
+    </div>
+  </header>
+  <main id="top">
+    <section class="intro container" aria-labelledby="page-title">
+      <div><p class="eyebrow">18 позиций · 3 категории</p><h1 id="page-title">Найдите то, что нужно для учёбы</h1><p class="intro-text">Учебные товары, курсы и инструменты в одном каталоге. Используйте фильтры, чтобы быстро найти подходящий вариант.</p></div>
+      <div class="intro-note"><strong>Каталог открыт</strong><span>Данные загружены из набора практической работы № 2</span></div>
+    </section>
+    <div class="catalog-layout container" id="catalog">
+      <aside class="filters" aria-labelledby="filters-title">
+        <div class="filters-heading"><div><p class="eyebrow">Подбор</p><h2 id="filters-title">Фильтры</h2></div><button class="text-button" id="resetFilters" type="button">Сбросить</button></div>
+        <label class="field-label" for="search">Поиск по названию</label><input class="control" id="search" type="search" placeholder="Например, товар 4" autocomplete="off">
+        <label class="field-label" for="category">Категория</label><select class="control" id="category"><option value="all">Все категории</option><option value="Книги">Книги</option><option value="Курсы">Курсы</option><option value="Инструменты">Инструменты</option></select>
+        <label class="field-label" for="maxPrice">Максимальная цена <output id="priceOutput" for="maxPrice">2 500 ₽</output></label><input id="maxPrice" type="range" min="500" max="2500" step="50" value="2500">
+        <label class="field-label" for="sort">Сортировка</label><select class="control" id="sort"><option value="default">Как в исходном наборе</option><option value="price-asc">Сначала дешевле</option><option value="price-desc">Сначала дороже</option><option value="rating-desc">По рейтингу</option></select>
+        <p class="filter-hint">Цена и рейтинг точно перенесены из <code>catalog.csv</code>.</p>
+      </aside>
+      <section class="catalog-content" aria-labelledby="results-title">
+        <div class="results-heading"><div><p class="eyebrow">Ассортимент</p><h2 id="results-title">Все товары</h2></div><p class="result-count" id="resultCount" aria-live="polite">Показываем 18 позиций</p></div>
+        <div class="product-grid" id="productGrid"></div>
+        <p class="empty-state" id="emptyState" hidden>По заданным условиям ничего не найдено. Попробуйте изменить фильтры.</p>
+      </section>
+    </div>
+    <section class="about-section" id="about"><div class="container about-inner"><div><p class="eyebrow">О проекте</p><h2>Каталог на HTML, CSS и SCSS</h2><p>Сетка карточек построена на CSS Grid. Панель фильтров и элементы карточек используют Flexbox. Значения темы оформления вынесены в SCSS-переменные.</p></div><div class="about-stat"><strong>18</strong><span>позиций из исходного CSV</span></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-row"><span>Практическая работа № 2</span><span>Адаптивная вёрстка и организация стилей</span></div></footer>
+</body>
+</html>

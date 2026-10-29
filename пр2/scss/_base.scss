@@ -1,0 +1,20 @@
+@use "variables" as *;
+@use "mixins" as *;
+:root { --accent: #{$accent}; --surface: #{$surface}; --background: #{$background}; --text: #{$text}; --muted: #{$muted}; --line: #{$line}; --radius: #{$radius}; --space: #{$space}; --container-width: #{$container-width}; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: $text; background: $background; font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+a { color: $accent; text-decoration: none; }
+a:hover { color: #2146c4; }
+button, input, select { font: inherit; }
+:focus-visible { @include focus-ring; }
+.container { @include container; }
+.skip-link { position: absolute; left: 1rem; top: -5rem; z-index: 5; padding: .7rem 1rem; color: $surface; background: $text; border-radius: 8px; }
+.skip-link:focus { top: 1rem; color: $surface; }
+.eyebrow { margin: 0 0 .45rem; color: $accent; font-size: .74rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { margin-bottom: space(.75); font-size: clamp(2.15rem, 4vw, 3.3rem); line-height: 1.1; letter-spacing: -.045em; }
+h2 { margin-bottom: .35rem; font-size: 1.35rem; line-height: 1.25; }
+
+
+

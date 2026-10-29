@@ -1,0 +1,12 @@
+// Тема из data/theme.json
+$accent: #315efb;
+$surface: #ffffff;
+$background: #f5f7fb;
+$text: #1f2937;
+$muted: #65728a;
+$line: #e1e7f0;
+$radius: 14px;
+$space: 16px;
+$container-width: 1180px;
+
+@function space($factor) { @return $space * $factor; }

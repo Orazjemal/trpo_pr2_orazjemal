@@ -1,0 +1,3 @@
+@use "variables" as *;
+@mixin container { width: min($container-width, calc(100% - 2 * $space)); margin-inline: auto; }
+@mixin focus-ring { outline: 3px solid rgba($accent, .35); outline-offset: 2px; }
